@@ -55,7 +55,7 @@ namespace EventExample
     // 警报器
     public class Alarm
     {
-        public void MakeAlert(Object sender, Heater.BoiledEventArgs e)
+        public void MakeAlert(object sender, Heater.BoiledEventArgs e)
         {
             Heater heater = (Heater)sender;     //这里是不是很熟悉呢？
             //访问 sender 中的公共字段
@@ -68,7 +68,7 @@ namespace EventExample
     // 显示器
     public class Display
     {
-        public static void ShowMsg(Object sender, Heater.BoiledEventArgs e)
+        public static void ShowMsg(object sender, Heater.BoiledEventArgs e)
         {
             //静态方法
             var heater = sender as Heater;
