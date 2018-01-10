@@ -7,9 +7,9 @@ namespace MultiValueDictionary
     {
         static void Main(string[] args)
         {
-            var mvd = new MultiValueDictionary<double,double>();
-            mvd.Add(13,4);
-            mvd.Add(3,5);
+            var mvd = new MultiValueDictionary<double, double>();
+            mvd.Add(13, 4);
+            mvd.Add(3, 5);
             mvd.Add(3.2, 4);
             mvd.Add(3.2, 5);
             mvd.Add(3.3, 4);
@@ -26,7 +26,7 @@ namespace MultiValueDictionary
         }
     }
 
-    public class MultiValueDictionary<T1, T2> 
+    public class MultiValueDictionary<T1, T2>
     {
         private readonly SortedDictionary<T1, List<T2>> _inner;
 
@@ -62,7 +62,7 @@ namespace MultiValueDictionary
             return _inner.Count;
         }
 
-        public IEnumerator<KeyValuePair<T1,List<T2>>> GetEnumerator()
+        public IEnumerator<KeyValuePair<T1, List<T2>>> GetEnumerator()
         {
             return _inner.GetEnumerator();
         }
