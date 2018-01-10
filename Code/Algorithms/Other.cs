@@ -71,29 +71,28 @@ namespace Algorithms
                 reversed[k] = s[last - k];
                 reversed[last - k] = temp;
             }
-            int next_word_start = 0;
-            int word_start = 0;
-            int word_end = 0;
+
+            int nextWordStart = 0;
             int len = s.Length;
-            while (next_word_start < len)
+            while (nextWordStart < len)
             {
-                word_start = next_word_start;
-                word_end = next_word_start;
-                while (reversed[word_end] != ' ')
+                var wordStart = nextWordStart;
+                var wordEnd = nextWordStart;
+                while (reversed[wordEnd] != ' ')
                 {
-                    word_end++;
-                    if (word_end == len)
+                    wordEnd++;
+                    if (wordEnd == len)
                     {
                         break;
                     }
                 }
-                next_word_start = word_end + 1;
-                word_end--;
-                for (; word_start < word_end; word_start++, word_end--)
+                nextWordStart = wordEnd + 1;
+                wordEnd--;
+                for (; wordStart < wordEnd; wordStart++, wordEnd--)
                 {
-                    char temp = reversed[word_start];
-                    reversed[word_start] = reversed[word_end];
-                    reversed[word_end] = temp;
+                    char temp = reversed[wordStart];
+                    reversed[wordStart] = reversed[wordEnd];
+                    reversed[wordEnd] = temp;
                 }
             }
 

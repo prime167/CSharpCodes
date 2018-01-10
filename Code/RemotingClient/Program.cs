@@ -3,7 +3,7 @@ using System.Runtime.Remoting.Channels;
 using System.Runtime.Remoting.Channels.Tcp;
 using RemotingObject;
 
-namespace RemoteClient
+namespace RemotingClient
 {
     class RemoteClient
     {

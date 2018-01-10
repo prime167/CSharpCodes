@@ -7,9 +7,7 @@ namespace Mutex_
     {
         private static void Main(string[] args)
         {
-            bool createdNew;
-
-            Mutex m = new Mutex(true, "myApp", out createdNew);
+            Mutex m = new Mutex(true, "myApp", out var createdNew);
 
             if (!createdNew)
             {

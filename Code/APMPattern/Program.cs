@@ -5,19 +5,19 @@ namespace APMPattern
 {
     class Program
     {
-        static string LongTask()
+        private static string LongTask()
         {
             Thread.Sleep(5000);
             return "long_task_result";
         }
 
-        static void OtherTask()
+        private static void OtherTask()
         {
             Thread.Sleep(1000);
             Console.WriteLine("other_task_result");
         }
 
-        static void Main()
+        private static void Main()
         {
             var asyncTask = new Func<string>(LongTask);
             Console.WriteLine("Start async task.");

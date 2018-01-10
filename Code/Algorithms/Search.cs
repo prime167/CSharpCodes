@@ -21,7 +21,9 @@ namespace Algorithms
                 if (cmp < 0) { low = mid + 1; }
                 else if (cmp > 0) { high = mid - 1; }
                 else { return mid; }
-            } return -(low + 1);
+            }
+
+            return -(low + 1);
         }
 
         public static int binary_search_first_position(int[] A, int n, int target)
@@ -38,8 +40,8 @@ namespace Algorithms
 
             if (high >= n || A[high] != target)
                 return -high - 1;
-            else
-                return high;  // high == low + 1
+
+            return high;  // high == low + 1
         }
 
         public static int binary_search_last_position(int[] A, int n, int target)
@@ -56,8 +58,8 @@ namespace Algorithms
 
             if (low < 0 || A[low] != target)
                 return -low - 2;
-            else
-                return low;  // low == high - 1
+
+            return low;  // low == high - 1
         }
 
         public static int binary_search_first_position1(int[] A, int n, int target)
@@ -72,8 +74,8 @@ namespace Algorithms
             int high = end[1];
             if (high >= n || A[high] != target)
                 return -high - 1;
-            else
-                return high;
+
+            return high;
         }
 
         public static int binary_search_last_position1(int[] A, int n, int target)
@@ -88,8 +90,8 @@ namespace Algorithms
             int low = end[0];
             if (low < 0 || A[low] != target)
                 return -low - 2;
-            else
-                return low;
+
+            return low;
         }
 
         /// <summary>
@@ -115,6 +117,7 @@ namespace Algorithms
                     }
                 }
             }
+
             return second;
         }
     }
