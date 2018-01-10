@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace MultiValueDictionary
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var mvd = new MultiValueDictionary<double, double>();
             mvd.Add(13, 4);
