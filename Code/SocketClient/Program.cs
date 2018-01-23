@@ -15,6 +15,7 @@ namespace SocketClient
         {
             byte[] data = new byte[1024];
             Socket newclient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            newclient.NoDelay = true;
             string ipadd = "127.0.0.1";
             int port = 9050;
             IPEndPoint ie = new IPEndPoint(IPAddress.Parse(ipadd), port);//服务器的IP和端口
