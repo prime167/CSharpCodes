@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rx", "Rx\Rx.csproj", "{EAFB779C-8EA5-4AB0-8DBB-E588094225BB}"
 EndProject
@@ -69,6 +69,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClientDemo", "TcpClientDemo\TcpClientDemo.csproj", "{1DDE4902-DE74-4FE2-A1B7-BA33AC2121A5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpListenerDemo", "TcpListenerDemo\TcpListenerDemo.csproj", "{3C39A648-6976-4A3F-9606-7BB97B8C15D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp72", "CSharp72\CSharp72.csproj", "{2FA54D1A-104D-4403-BB94-01F3A6037D06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -176,6 +178,10 @@ Global
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
