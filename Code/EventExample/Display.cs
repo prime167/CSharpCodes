@@ -7,21 +7,20 @@
  * 作者：张子阳(Jimmy Zhang)
  * ********************************************/
 
+using System;
+
 namespace EventExample
 {
-    class Program
+    // 显示器
+    public class Display
     {
-        static void Main()
+        public static void ShowMsg(object sender, BoiledEventArgs e)
         {
-            var heater = new Heater();
-            var alarm = new Alarm();
-
-            heater.Boiled += alarm.MakeAlert;   //注册方法
-            //heater.Boiled += new Alarm().MakeAlert;       //给匿名对象注册方法
-
-            heater.Boiled += Display.ShowMsg;       //注册静态方法
-
-            heater.BoilWater(); //烧水，会自动调用注册过对象的方法
+            //静态方法
+            var heater = sender as Heater;
+            Console.WriteLine("Display：{0} - {1}: ", heater.Area, heater.Type);
+            Console.WriteLine("Display：水快烧开了，当前温度：{0}度。", e.Temperature);
+            Console.WriteLine();
         }
     }
 }
