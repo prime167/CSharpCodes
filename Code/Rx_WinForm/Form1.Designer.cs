@@ -1,4 +1,4 @@
-﻿namespace Rx_WinFrom
+﻿namespace Rx_WinForm
 {
     partial class Form1
     {

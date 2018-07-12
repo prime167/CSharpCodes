@@ -12,7 +12,7 @@ namespace Mutex_
             if (!createdNew)
             {
                 // myApp is already running...
-                Console.WriteLine("myApp is already running!");
+                Console.WriteLine("myApp is already running sss!");
                 Environment.Exit(0);
 
             }

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rx", "Rx\Rx.csproj", "{EAFB779C-8EA5-4AB0-8DBB-E588094225BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rx_WinFrom", "WindowsFormsApplication1\Rx_WinFrom.csproj", "{55D0BBC6-AB01-4454-875C-905677A13BF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rx_WinForm", "Rx_WinForm\Rx_WinForm.csproj", "{55D0BBC6-AB01-4454-875C-905677A13BF7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event Example", "EventExample\Event Example.csproj", "{208049C6-AEE8-4784-9CC5-5940C03E8CD4}"
 EndProject
@@ -74,7 +74,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp72", "CSharp72\CSharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{11552831-BBF2-45E2-B0BD-6025AEA1CCBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreTest", "CoreTest\CoreTest.csproj", "{586B241E-77EE-4727-BB9A-081933C65B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreTest", "CoreTest\CoreTest.csproj", "{586B241E-77EE-4727-BB9A-081933C65B59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
