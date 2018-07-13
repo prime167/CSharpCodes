@@ -12,7 +12,7 @@ using System;
 namespace EventExample
 {
     // 热水器
-    public partial class Heater
+    public class Heater
     {
         private int _temperature;
         public string Type = "RealFire 001";        // 添加型号作为演示
