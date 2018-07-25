@@ -1,10 +1,9 @@
-﻿using System;
+﻿using Hello.Interface;
+using System;
 using System.Configuration;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using Hello.Interface;
 
 namespace Reflection
 {
@@ -30,7 +29,7 @@ namespace Reflection
 
         public void Method<T>(T t)
         {
-            var result = t.GetType();
+            Type result = t.GetType();
             Console.WriteLine(result.Name);
         }
     }
@@ -54,7 +53,8 @@ namespace Reflection
                 Console.WriteLine("abtract class, can not create instance");
                 Console.ReadLine();
             }
-            var myClassObj = Activator.CreateInstance<MyClass>();
+
+            MyClass myClassObj = Activator.CreateInstance<MyClass>();
 
             Type myTypeObj = myClassObj.GetType();
 
@@ -65,27 +65,28 @@ namespace Reflection
             PrintAttributeInfo(myTypeObj);
 
             MethodInfo m = myTypeObj.GetMethod("Method");
-            var generic = m.MakeGenericMethod(typeof(double));
+            MethodInfo generic = m.MakeGenericMethod(typeof(double));
             object[] p = { 5 };
 
             Console.WriteLine(generic.Invoke(myClassObj, p));
 
             // get constructor
-            var constructor = typeOfClass.GetConstructor(new[] { typeof(int) });
-            var lk = constructor.Invoke(new object[] { 2 });
-            var w = lk as MyClass;
+            ConstructorInfo constructor = typeOfClass.GetConstructor(new[] { typeof(int) });
+            object lk = constructor.Invoke(new object[] { 2 });
+            MyClass w = lk as MyClass;
             Console.WriteLine(w.a);
+
             // another class without attribute 
-            var myClassObj1 = Activator.CreateInstance<MyClass1>();
+            MyClass1 myClassObj1 = Activator.CreateInstance<MyClass1>();
             Type myTypeObj1 = myClassObj1.GetType();
             PrintAttributeInfo(myTypeObj1);
 
             // load assembly dynamicly
-            var language = ConfigurationManager.AppSettings["language"]??"zh-cn";
-            var helloType = "Hello.Hello";
-            var assembly = Assembly.Load("Hello." + language); // load assembly
-            var type = assembly.GetType(helloType); // class type         
-            var obj = assembly.CreateInstance(helloType); // create class instance
+            string language = ConfigurationManager.AppSettings["language"] ?? "zh-cn";
+            string helloType = "Hello.Hello";
+            Assembly assembly = Assembly.Load("Hello." + language); // load assembly
+            Type type = assembly.GetType(helloType); // class type
+            object obj = assembly.CreateInstance(helloType); // create class instance
             // or use 
             // The Assembly.CreateInstance actually calls Activator.CreateInstance under the hood
             obj = Activator.CreateInstance(type); // create class instance
@@ -95,12 +96,12 @@ namespace Reflection
             // LoadFile()
             // 1、需要绝对路径(.dll)
             // 2、可以加载相同dll的多个copy
-            var absolutePath = Directory.GetCurrentDirectory() + @"\V2\Hello." + language + ".dll";
+            string absolutePath = Directory.GetCurrentDirectory() + @"\V2\Hello." + language + ".dll";
             if (File.Exists(absolutePath))
             {
-                var cnV2 = Assembly.LoadFile(absolutePath);
-                var stype = cnV2.GetType(helloType);
-                var sobj = cnV2.CreateInstance(helloType);
+                Assembly cnV2 = Assembly.LoadFile(absolutePath);
+                Type stype = cnV2.GetType(helloType);
+                object sobj = cnV2.CreateInstance(helloType);
 
                 method = stype.GetMethod("SayHello");
                 method.Invoke(sobj, new object[] { "Jeff" });
@@ -111,7 +112,7 @@ namespace Reflection
             o.SayHello("Jeff");
 
             // or use interface
-            var io = obj as IHello;
+            IHello io = obj as IHello;
             io.SayHello("Jeff");
 
             Console.ReadLine();
