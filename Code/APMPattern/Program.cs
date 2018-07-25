@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace APMPattern
 {
-    class Program
+    internal class Program
     {
         private static string LongTask()
         {
@@ -21,9 +21,9 @@ namespace APMPattern
         {
             var asyncTask = new Func<string>(LongTask);
             Console.WriteLine("Start async task.");
-            var asyncResult = asyncTask.BeginInvoke(ar =>
+            IAsyncResult asyncResult = asyncTask.BeginInvoke(ar =>
             {
-                var result = asyncTask.EndInvoke(ar);
+                string result = asyncTask.EndInvoke(ar);
                 Console.WriteLine("Obtained task result: " + result);
             }, null);
 

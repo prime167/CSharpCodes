@@ -1,11 +1,11 @@
 ﻿using System;
 using Xunit;
 
-namespace CSharp72
+namespace CSharp
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var d = new Dog
             {
@@ -16,7 +16,7 @@ namespace CSharp72
             Print(d);
             Print(3);
 
-            int[] data = new int[10];
+            var data = new int[10];
             Console.WriteLine($"Before change, element at 2 is: {data[2]}");
             ref int value = ref ElementAt(data, 2);
             value = 5;

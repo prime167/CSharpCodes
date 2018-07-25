@@ -9,11 +9,11 @@ namespace WindowsFormsApplication1
     {
         private DateTime _starTime;
 
-        [System.Runtime.InteropServices.DllImport("user32.dll")]
-
         // 隐藏文本框的光标
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
         static extern bool HideCaret(IntPtr hWnd);
-        const int Max = int.MaxValue;
+
+        const int Max = Int32.MaxValue;
         CancellationTokenSource _cts;
         private bool _running;
 
@@ -35,7 +35,7 @@ namespace WindowsFormsApplication1
             _running = true;
             _starTime = DateTime.Now;
 
-            var r = DoJobAsync(progress, _cts.Token);
+            Task<double> r = DoJobAsync(progress, _cts.Token);
             textBox1.Text = @"please wait...";
             textBox1.Text = (await r).ToString();
 
@@ -56,7 +56,7 @@ namespace WindowsFormsApplication1
         {
             var progressReport = new ProgressReport();
 
-            var t = await Task.Run(() =>
+            double t = await Task.Run(() =>
             {
                 double sum = 0;
                 for (int i = 1; i < Max; i++)
@@ -65,7 +65,7 @@ namespace WindowsFormsApplication1
                     {
                         ct.ThrowIfCancellationRequested();
                         double x = i * 1.0;
-                        sum += 1.0 / (x*x);
+                        sum += 1.0 / (x * x);
 
                         // 根据实际情况调整，不要卡死界面，更不要拖累Job进度
                         if (i % 100000 == 0 || i == Max - 1)
@@ -76,7 +76,7 @@ namespace WindowsFormsApplication1
                             progress.Report(progressReport);
                         }
                     }
-                    catch (OperationCanceledException ex)
+                    catch (OperationCanceledException)
                     {
                         progressReport.CurrentStep = i;
                         progressReport.CurrentResult = sum;
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
         {
             if (_running)
             {
-                var r = MessageBox.Show("Job is still running ,are you sure to cancel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+                DialogResult r = MessageBox.Show("Job is still running ,are you sure to cancel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
                 if (r == DialogResult.Yes)
                 {
                     _cts.Cancel();
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
         {
             if (_running)
             {
-                var r = MessageBox.Show("Job is still running ,are you sure to close the window?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+                DialogResult r = MessageBox.Show("Job is still running ,are you sure to close the window?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
                 if (r == DialogResult.Yes)
                 {
                     _cts.Cancel();
