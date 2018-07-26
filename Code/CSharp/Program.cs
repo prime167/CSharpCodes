@@ -22,7 +22,6 @@ namespace CSharp
             value = 5;
             Console.WriteLine($"After change, element at 2 is: {data[2]}");
 
-
             ref int x = ref ReturnByReference();
             Console.WriteLine(x);
             x = 66;
