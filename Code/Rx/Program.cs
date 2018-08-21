@@ -20,7 +20,7 @@ namespace Rx
             its.Where(i => i % 2 == 0).ToList().ForEach(i => Console.Write("{0} ", i));
 
             Console.WriteLine();
-            var input = Observable.Range(1, 15);
+            IObservable<int> input = Observable.Range(1, 15);
             input.Where(i => i % 2 == 0).Subscribe(x => Console.Write("{0} ", x));
 
             var txt = new TextBox();
