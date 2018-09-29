@@ -86,7 +86,6 @@ namespace Algorithms
             }
         }
 
-
         /// <summary>
         /// Returns the Node in the specified position or null if inexistent
         /// </summary>
