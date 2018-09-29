@@ -9,14 +9,17 @@ namespace TcpClientDemo
         private const int PortNum = 13;
         private const string HostName = "127.0.0.1";
 
-        public static void Main(String[] args)
+        public static void Main(string[] args)
         {
             for (int i = 0; i < 10; i++)
             {
                 try
                 {
-                    var client = new TcpClient(HostName, PortNum);
-                    client.NoDelay = true;
+                    var client = new TcpClient(HostName, PortNum)
+                    {
+                        NoDelay = true
+                    };
+
                     NetworkStream ns = client.GetStream();
 
                     byte[] bytes = new byte[1024];

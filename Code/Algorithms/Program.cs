@@ -24,7 +24,7 @@ namespace Algorithms
             Console.WriteLine("\n二分查找:");
             Console.WriteLine("find {0} in {1}", find, dd.Concat());
 
-            var q = Search.binary_search_first_position1(dd.ToArray(),dd.Count, find);
+            var q = Search.binary_search_first_position1(dd.ToArray(), dd.Count, find);
             Console.WriteLine("index: {0}", q);
 
             Console.WriteLine("\n");
@@ -134,11 +134,9 @@ namespace Algorithms
             var s = "this is a test!";
             Console.WriteLine(Other.ReverseSentenceByWord(s));
 
-            var ls = new decimal[] {-1, 2, -3, -5, 3, 4, -2, 3};
-            int start;
-            int end;
-            Console.WriteLine(ls.ToList().FindBestSubsequence(out start, out end));
-            Console.WriteLine("start index:{0}, end index:{1}",start,end);
+            var ls = new decimal[] { -1, 2, -3, -5, 3, 4, -2, 3 };
+            Console.WriteLine(ls.ToList().FindBestSubsequence(out int start, out int end));
+            Console.WriteLine("start index:{0}, end index:{1}", start, end);
             Console.ReadLine();
         }
 

@@ -14,11 +14,14 @@ namespace SocketClient
         static void Main(string[] args)
         {
             byte[] data = new byte[1024];
-            Socket newclient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            newclient.NoDelay = true;
+            var newclient = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)
+            {
+                NoDelay = true
+            };
+
             string ipadd = "127.0.0.1";
             int port = 9050;
-            IPEndPoint ie = new IPEndPoint(IPAddress.Parse(ipadd), port);//服务器的IP和端口
+            var ie = new IPEndPoint(IPAddress.Parse(ipadd), port);//服务器的IP和端口
             try
             {
                 //因为客户端只是用来向特定的服务器发送信息，所以不需要绑定本机的IP和端口。不需要监听。

@@ -22,12 +22,14 @@ namespace ML
         /// <returns>Trained machine learning model.</returns>
         public PredictionModel<IrisFlower, IrisPredict> BuildAndTrain()
         {
-            var pipeline = new LearningPipeline();
-            pipeline.Add(new TextLoader(_trainingDataLocation).CreateFrom<IrisFlower>(useHeader: true, separator: ','));
-            pipeline.Add(new Dictionarizer("Label"));
-            pipeline.Add(new ColumnConcatenator("Features", "SepalLength", "SepalWidth", "PetalLength", "PetalWidth"));
-            pipeline.Add(new StochasticDualCoordinateAscentClassifier());
-            pipeline.Add(new PredictedLabelColumnOriginalValueConverter() { PredictedLabelColumn = "PredictedLabel" });
+            var pipeline = new LearningPipeline
+            {
+                new TextLoader(_trainingDataLocation).CreateFrom<IrisFlower>(useHeader: true, separator: ','),
+                new Dictionarizer("Label"),
+                new ColumnConcatenator("Features", "SepalLength", "SepalWidth", "PetalLength", "PetalWidth"),
+                new StochasticDualCoordinateAscentClassifier(),
+                new PredictedLabelColumnOriginalValueConverter() { PredictedLabelColumn = "PredictedLabel" }
+            };
 
             return pipeline.Train<IrisFlower, IrisPredict>();
         }
