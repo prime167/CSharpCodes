@@ -1,8 +1,8 @@
-﻿using Microsoft.ML;
-using Microsoft.ML.Data;
-using Microsoft.ML.Models;
-using Microsoft.ML.Trainers;
-using Microsoft.ML.Transforms;
+﻿using Microsoft.ML.Legacy;
+using Microsoft.ML.Legacy.Data;
+using Microsoft.ML.Legacy.Models;
+using Microsoft.ML.Legacy.Trainers;
+using Microsoft.ML.Legacy.Transforms;
 
 namespace ML
 {
@@ -35,7 +35,7 @@ namespace ML
         }
 
         /// <summary>
-        /// Ussing passed testing data and model, it calculates model's accuracy.
+        /// Using passed testing data and model, it calculates model's accuracy.
         /// </summary>
         /// <returns>Accuracy of the model.</returns>
         public double Evaluate(PredictionModel<IrisFlower, IrisPredict> model, string testDataLocation)
