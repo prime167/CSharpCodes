@@ -16,7 +16,7 @@ namespace EventExample
     {
         private int _temperature;
         public string Type = "RealFire 001";        // 添加型号作为演示
-        public string Area = "China Xian";          // 添加产地作为演示
+        public string Area = "China Xi'an";          // 添加产地作为演示
 
         public event EventHandler<BoiledEventArgs> Boiled; //声明事件
 
