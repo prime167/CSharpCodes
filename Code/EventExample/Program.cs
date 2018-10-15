@@ -9,9 +9,9 @@
 
 namespace EventExample
 {
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             var heater = new Heater();
             var alarm = new Alarm();

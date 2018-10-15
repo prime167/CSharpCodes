@@ -18,8 +18,8 @@ namespace EventExample
         {
             //静态方法
             var heater = sender as Heater;
-            Console.WriteLine("Display：{0} - {1}: ", heater.Area, heater.Type);
-            Console.WriteLine("Display：水快烧开了，当前温度：{0}度。", e.Temperature);
+            Console.WriteLine($"Display：{heater.Area} - {heater.Type}: ");
+            Console.WriteLine($"Display：水快烧开了，当前温度：{e.Temperature}度。");
             Console.WriteLine();
         }
     }
