@@ -14,14 +14,14 @@ namespace SocketServer
         static void Main(string[] args)
         {
             int recv;//用于表示客户端发送的信息长度
-            byte[] data = new byte[1024];//用于缓存客户端所发送的信息,通过socket传递的信息必须为字节数组
-            IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9050);//本机预使用的IP和端口
-            Socket newsock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            var data = new byte[1024];//用于缓存客户端所发送的信息,通过socket传递的信息必须为字节数组
+            var ipep = new IPEndPoint(IPAddress.Any, 9050);//本机预使用的IP和端口
+            var newsock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             newsock.Bind(ipep);//绑定
             newsock.Listen(10);//监听
             Console.WriteLine("waiting for a client");
             Socket client = newsock.Accept();//当有可用的客户端连接尝试时执行，并返回一个新的socket,用于与客户端之间的通信
-            IPEndPoint clientip = (IPEndPoint)client.RemoteEndPoint;
+            var clientip = (IPEndPoint)client.RemoteEndPoint;
             Console.WriteLine("connect with client:" + clientip.Address + " at port:" + clientip.Port);
             string welcome = "welcome here!";
             data = Encoding.ASCII.GetBytes(welcome);

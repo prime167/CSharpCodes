@@ -50,7 +50,7 @@ namespace SocketClient
                 Console.WriteLine(stringdata);
             }
 
-            Console.WriteLine("disconnect from sercer");
+            Console.WriteLine("disconnect from server");
             newclient.Shutdown(SocketShutdown.Both);
             newclient.Close();
         }
