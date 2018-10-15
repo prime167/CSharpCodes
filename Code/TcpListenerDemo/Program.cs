@@ -9,7 +9,7 @@ namespace TcpListenerDemo
     {
         private const int PortNum = 13;
 
-        public static int Main(String[] args)
+        public static int Main(string[] args)
         {
             bool done = false;
 
