@@ -11,7 +11,7 @@ namespace Client
     public class ServerClient
     {
         private const int BufferSize = 8192;
-        private byte[] buffer;
+        private readonly byte[] buffer;
         private TcpClient client;
         private NetworkStream streamToServer;
 
@@ -189,7 +189,6 @@ namespace Client
             listener.Stop();
         }
 
-
         // 随机获取一个图片名称
         private string generateFileName(string fileName)
         {
@@ -201,10 +200,16 @@ namespace Client
         {
             lock (streamToServer)
             {
-                streamToServer?.Dispose();
+                if (streamToServer != null)
+                {
+                    streamToServer.Dispose();
+                }
             }
 
-            client?.Close();
+            if (client != null)
+            {
+                client.Close();
+            }
         }
     }
 }

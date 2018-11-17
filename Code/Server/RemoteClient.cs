@@ -59,7 +59,7 @@ namespace Server
                 foreach (string pro in protocolArray)
                 {
                     // 这里异步调用，不然这里可能会比较耗时
-                    var start = new ParameterizedThreadStart(handleProtocol);
+                    var start = new ParameterizedThreadStart(HandleProtocol);
                     start.BeginInvoke(pro, null, null);
                 }
 
@@ -74,35 +74,36 @@ namespace Server
             {
                 if (streamToClient != null)
                     streamToClient.Dispose();
+
                 client.Close();
                 Console.WriteLine(ex.Message);      // 捕获异常时退出程序
             }
         }
 
         // 处理protocol
-        private void handleProtocol(object obj)
+        private void HandleProtocol(object obj)
         {
             string pro = obj as string;
-            ProtocolHelper helper = new ProtocolHelper(pro);
+            var helper = new ProtocolHelper(pro);
             FileProtocol protocol = helper.GetProtocol();
 
             if (protocol.Mode == FileRequestMode.Send)
             {
                 // 客户端发送文件，对服务端来说则是接收文件
-                receiveFile(protocol);
+                ReceiveFile(protocol);
             }
             else if (protocol.Mode == FileRequestMode.Receive)
             {
                 // 客户端接收文件，对服务端来说则是发送文件
-                sendFile(protocol);
+                SendFile(protocol);
             }
         }
 
         // 发送文件
-        private void sendFile(FileProtocol protocol)
+        private void SendFile(FileProtocol protocol)
         {
             TcpClient localClient;
-            NetworkStream streamToClient = getStreamToClient(protocol, out localClient);
+            NetworkStream streamToClient = GetStreamToClient(protocol, out localClient);
 
             // 获得文件的路径
             string filePath = Environment.CurrentDirectory + "/" + protocol.FileName;
@@ -140,10 +141,10 @@ namespace Server
         }
 
 
-        private void receiveFile(FileProtocol protocol)
+        private void ReceiveFile(FileProtocol protocol)
         {
             TcpClient localClient;
-            NetworkStream streamToClient = getStreamToClient(protocol, out localClient);
+            NetworkStream streamToClient = GetStreamToClient(protocol, out localClient);
 
             // 随机生成一个在当前目录下的文件名称
             string path =
@@ -168,10 +169,10 @@ namespace Server
             streamToClient.Dispose();
             fs.Dispose();
             localClient.Close();
-        }        
+        }
 
         // 获取连接到远程的流 -- 公共方法
-        private NetworkStream getStreamToClient(FileProtocol protocol, out TcpClient localClient)
+        private NetworkStream GetStreamToClient(FileProtocol protocol, out TcpClient localClient)
         {
             // 获取远程客户端的位置
             IPEndPoint endpoint = client.Client.RemoteEndPoint as IPEndPoint;
