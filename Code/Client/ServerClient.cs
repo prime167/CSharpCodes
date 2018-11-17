@@ -143,8 +143,8 @@ namespace Client
         // 接收文件 -- 同步方法
         public void ReceiveFile(string fileName)
         {
-            IPAddress ip = IPAddress.Parse("127.0.0.1");
-            TcpListener listener = new TcpListener(ip, 0);
+            var ip = IPAddress.Parse("127.0.0.1");
+            var listener = new TcpListener(ip, 0);
             listener.Start();
 
             // 获取本地侦听的端口号
