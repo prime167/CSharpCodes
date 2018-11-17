@@ -17,7 +17,7 @@ namespace Client
                 Console.WriteLine("Press 'Q' to exit. \n");
                 Console.Write("Enter your choice: ");
                 input = Console.ReadLine();
-                switch (input.ToUpper())
+                switch (input?.ToUpper())
                 {
                     case "S1":
                         client.BeginSendFile(path + "Client01.jpg");
