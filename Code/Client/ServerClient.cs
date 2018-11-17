@@ -162,9 +162,8 @@ namespace Client
             Console.WriteLine("Start sending file...");
             NetworkStream stream = localClient.GetStream();
 
-            // 获取文件保存的路劲
-            string filePath =
-                Environment.CurrentDirectory + "/" + generateFileName(fileName);
+            // 获取文件保存的路径
+            string filePath = Environment.CurrentDirectory + "/" + generateFileName(fileName);
 
             // 创建文件流
             var fs = new FileStream(filePath, FileMode.CreateNew, FileAccess.Write);
