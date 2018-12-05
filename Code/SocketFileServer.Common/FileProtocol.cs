@@ -4,36 +4,22 @@ namespace SocketFileServer.Common
 {
     public struct FileProtocol
     {
-        private readonly FileRequestMode mode;
-        private readonly int port;
-        private readonly string fileName;
-
-        public FileProtocol
-            (FileRequestMode mode, int port, string fileName)
+        public FileProtocol(FileRequestMode mode, int port, string fileName)
         {
-            this.mode = mode;
-            this.port = port;
-            this.fileName = fileName;
+            Mode = mode;
+            Port = port;
+            FileName = fileName;
         }
 
-        public FileRequestMode Mode
-        {
-            get { return mode; }
-        }
+        public FileRequestMode Mode { get; }
 
-        public int Port
-        {
-            get { return port; }
-        }
+        public int Port { get; }
 
-        public string FileName
-        {
-            get { return fileName; }
-        }
+        public string FileName { get; }
 
         public override string ToString()
         {
-            return String.Format("<protocol><file name=\"{0}\" mode=\"{1}\" port=\"{2}\" /></protocol>", fileName, mode, port);
+            return String.Format("<protocol><file name=\"{0}\" mode=\"{1}\" port=\"{2}\" /></protocol>", FileName, Mode, Port);
         }
     }
 }

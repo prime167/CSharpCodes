@@ -1,5 +1,6 @@
 ﻿using System;
 using Xunit;
+#nullable enable
 
 namespace CSharp
 {
@@ -83,6 +84,6 @@ namespace CSharp
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
     }
 }

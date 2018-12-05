@@ -15,12 +15,19 @@ namespace Client
         private TcpClient client;
         private NetworkStream streamToServer;
 
-        public ServerClient()
+        public string Ip { get; set; }
+
+        public int Port { get; set; }
+
+        public ServerClient(string ip, int port)
         {
+            Ip = ip;
+            Port = port;
+
             try
             {
                 client = new TcpClient();
-                client.Connect("localhost", 8500);      // 与服务器连接
+                client.Connect(Ip, Port);      // 与服务器连接
             }
             catch (Exception ex)
             {
@@ -58,8 +65,7 @@ namespace Client
         // 发送文件 - 异步方法
         public void BeginSendFile(string filePath)
         {
-            ParameterizedThreadStart start =
-                new ParameterizedThreadStart(BeginSendFile);
+            var start = new ParameterizedThreadStart(BeginSendFile);
             start.BeginInvoke(filePath, null, null);
         }
 
@@ -72,8 +78,7 @@ namespace Client
         // 发送文件 -- 同步方法
         public void SendFile(string filePath)
         {
-
-            IPAddress ip = IPAddress.Parse("127.0.0.1");
+            IPAddress ip = IPAddress.Parse(Ip);
             TcpListener listener = new TcpListener(ip, 0);
             listener.Start();
 
@@ -83,8 +88,7 @@ namespace Client
 
             // 获取发送的协议字符串
             string fileName = Path.GetFileName(filePath);
-            FileProtocol protocol =
-                new FileProtocol(FileRequestMode.Send, listeningPort, fileName);
+            var protocol = new FileProtocol(FileRequestMode.Send, listeningPort, fileName);
             string pro = protocol.ToString();
 
             SendMessage(pro);       // 发送协议到服务端
@@ -143,12 +147,12 @@ namespace Client
         // 接收文件 -- 同步方法
         public void ReceiveFile(string fileName)
         {
-            var ip = IPAddress.Parse("127.0.0.1");
+            var ip = IPAddress.Parse(Ip);
             var listener = new TcpListener(ip, 0);
             listener.Start();
 
             // 获取本地侦听的端口号
-            IPEndPoint endPoint = listener.LocalEndpoint as IPEndPoint;
+            var endPoint = listener.LocalEndpoint as IPEndPoint;
             int listeningPort = endPoint.Port;
 
             // 获取发送的协议字符串

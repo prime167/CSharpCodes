@@ -9,8 +9,8 @@ namespace Server
         static void Main(string[] args)
         {
             Console.WriteLine("Server is running ... ");
-            IPAddress ip = IPAddress.Parse("127.0.0.1");
-            TcpListener listener = new TcpListener(ip, 8500);
+            var ip = IPAddress.Parse("127.0.0.1");
+            var listener = new TcpListener(IPAddress.Any, 8500);
 
             listener.Start();           // 开启对控制端口 8500 的侦听
             Console.WriteLine("Start Listening ...");
