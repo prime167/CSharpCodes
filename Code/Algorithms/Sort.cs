@@ -7,7 +7,7 @@ namespace Algorithms
     {
         /// <summary>
         /// 冒泡排序
-        /// 总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 既时间复杂度是O(n^2)
+        /// 总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 即时间复杂度是O(n^2)
         /// </summary>
         /// <param name="list"></param>
         public static List<T> BubbleSort<T>(List<T> list) where T : IComparable
@@ -31,7 +31,7 @@ namespace Algorithms
 
         /// <summary>
         /// 选择排序，每次在剩余的集合里找到最小(大)的，再交换
-        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 既时间复杂度是O(n^2)
+        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 即时间复杂度是O(n^2)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -62,7 +62,7 @@ namespace Algorithms
 
         /// <summary>
         /// 插入排序
-        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 既时间复杂度是O(n^2)
+        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 即时间复杂度是O(n^2)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -89,7 +89,7 @@ namespace Algorithms
 
         /// <summary>
         /// Shell 排序
-        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 既时间复杂度是O(n^2)
+        /// 最坏总共需循环 (1+2+3+...+count-1) = (count)(count-1)/2 次, 即时间复杂度是O(n^2)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
