@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2026
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28606.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rx", "Rx\Rx.csproj", "{EAFB779C-8EA5-4AB0-8DBB-E588094225BB}"
 EndProject
@@ -211,7 +211,6 @@ Global
 		{586B241E-77EE-4727-BB9A-081933C65B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{586B241E-77EE-4727-BB9A-081933C65B59}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2954DA38-23A2-47C4-8336-38F7518A2AEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2954DA38-23A2-47C4-8336-38F7518A2AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2954DA38-23A2-47C4-8336-38F7518A2AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2954DA38-23A2-47C4-8336-38F7518A2AEC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4460B69A-34B6-4731-A49E-CE33869B4F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

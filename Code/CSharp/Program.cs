@@ -7,6 +7,12 @@ namespace CSharp
     {
         private static void Main(string[] args)
         {
+            var collection = new BookCollection();
+            ref readonly var book = ref collection.GetBookByTitle("Tale of Two Cities, A");
+            //book = new Book(); // Line 1
+            //book.Author = "Konrad Kokosa"; // Line 2
+            Console.WriteLine(book.Author);
+
             var d = new Dog
             {
                 Id = 1,
@@ -82,7 +88,37 @@ namespace CSharp
     public class Dog
     {
         public int Id { get; set; }
-
         public string Name { get; set; }
+    }
+
+    public struct Book // or struct
+    {
+        public string Title;
+        public string Author;
+
+        public void ModifyAuthor(string author)
+        {
+            this.Author = author;
+        }
+    }
+
+    public class BookCollection
+    {
+        private Book[] books =
+        {
+              new Book { Title = "Call of the Wild, The", Author = "Jack London" },
+              new Book { Title = "Tale of Two Cities, A", Author = "Charles Dickens" }
+        };
+
+        private Book nobook = default;
+        public ref readonly Book GetBookByTitle(string title)
+        {
+            for (int ctr = 0; ctr < books.Length; ctr++)
+            {
+                if (title == books[ctr].Title)
+                    return ref books[ctr];
+            }
+            return ref nobook;
+        }
     }
 }

@@ -37,7 +37,6 @@ namespace Algorithms
             _head = null;
         }
 
-
         /// <summary>
         /// Add a new Node to the list.
         /// </summary>
