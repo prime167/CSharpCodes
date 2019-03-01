@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using Xunit;
 
 namespace CSharp
@@ -88,7 +89,8 @@ namespace CSharp
     public class Dog
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+
+        public string? Name { get; set; }
     }
 
     public struct Book // or struct
