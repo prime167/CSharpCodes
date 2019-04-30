@@ -1,6 +1,7 @@
 ﻿#nullable enable
 using System;
 using Xunit;
+#nullable enable
 
 namespace CSharp
 {
@@ -113,6 +114,7 @@ namespace CSharp
         };
 
         private Book nobook = default;
+
         public ref readonly Book GetBookByTitle(string title)
         {
             for (int ctr = 0; ctr < books.Length; ctr++)
