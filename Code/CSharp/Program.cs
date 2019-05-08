@@ -1,7 +1,6 @@
 ﻿#nullable enable
 using System;
 using Xunit;
-#nullable enable
 
 namespace CSharp
 {
