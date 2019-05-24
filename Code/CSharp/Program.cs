@@ -58,9 +58,9 @@ namespace CSharp
             Console.WriteLine(d.Name ?? "No Name");
         }
 
-        private static void Print(int i)
+        private static void Print(in int i)
         {
-            i = 5;
+            //i = 5;
             Console.WriteLine(i);
         }
 
