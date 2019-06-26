@@ -14,12 +14,12 @@ namespace Rx_WinForm
             InitializeComponent();
         }
 
-        private  void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
             // Winform的drag(等于按下左键鼠标移动直到放开)
             var drag = from down in this.MouseDownAsObservable()
-                from move in this.MouseMoveAsObservable().TakeUntil(this.MouseUpAsObservable())
-                select new {move.X, move.Y};
+                       from move in this.MouseMoveAsObservable().TakeUntil(this.MouseUpAsObservable())
+                       select new { move.X, move.Y };
 
             // 取得TextBox控件的TextChanged事件
             IObservable<string> textChanage = Observable.FromEventPattern<EventArgs>(textBox1, "TextChanged")
@@ -36,12 +36,12 @@ namespace Rx_WinForm
             var mouseMove = Observable.FromEventPattern<MouseEventArgs>(myPictureBox, "MouseMove")
                 .Select(x => x.EventArgs.Location);
             var dragandDrop = from down in mouseDown
-                from move in mouseMove.StartWith(down).TakeUntil(mouseUp)
-                select new
-                {
-                    x = move.X - down.X,
-                    y = move.Y - down.Y
-                };
+                              from move in mouseMove.StartWith(down).TakeUntil(mouseUp)
+                              select new
+                              {
+                                  x = move.X - down.X,
+                                  y = move.Y - down.Y
+                              };
 
             dragandDrop.Subscribe(value =>
             {
@@ -55,8 +55,8 @@ namespace Rx_WinForm
 
             GetValue();
 
-            var mv = Observable.FromEventPattern<MouseEventArgs>(this, "MouseMove").Select(x => x.EventArgs.Location).Where(fs=>fs.X ==fs.Y);
-            mv.Subscribe(a=>MessageBox.Show("ff"));
+            var mv = Observable.FromEventPattern<MouseEventArgs>(this, "MouseMove").Select(x => x.EventArgs.Location).Where(fs => fs.X == fs.Y);
+            mv.Subscribe(a => MessageBox.Show("ff"));
 
             this.ObserveResize()
                 .Throttle(TimeSpan.FromSeconds(3))
@@ -95,40 +95,40 @@ namespace Rx_WinForm
     }
 
     // 利用扩展方法将Winform原有的事件变换为 IObservable<T> 对象
-        public static class FormExtensions
+    public static class FormExtensions
+    {
+        public static IObservable<MouseEventArgs> MouseMoveAsObservable(this Form form)
         {
-            public static IObservable<MouseEventArgs> MouseMoveAsObservable(this Form form)
-            {
-                return Observable.FromEventPattern<MouseEventArgs>(form, "MouseMove").Select(e => e.EventArgs);
-            }
-
-            public static IObservable<MouseEventArgs> MouseDownAsObservable(this Form form)
-            {
-                return Observable.FromEventPattern<MouseEventArgs>(form, "MouseDown").Select(e => e.EventArgs);
-            }
-
-            public static IObservable<MouseEventArgs> MouseUpAsObservable(this Form form)
-            {
-                return Observable.FromEventPattern<MouseEventArgs>(form, "MouseUp").Select(e => e.EventArgs);
-            }
-
-            // Returns an observable sequence of a framework element's
-            // SizeChanged events.
-            public static IObservable<EventArgs> ObserveResize(this Form form)
-            {
-                return Observable.FromEventPattern<EventArgs>(form, "SizeChanged").Select(e => e.EventArgs);
-            }
-
-            //// Returns an observable sequence of a window's 
-            //// LocationChanged events.
-            //public static IObservable<EventPattern<EventArgs>>
-            //    ObserveLocationChanged(this Window window)
-            //{
-            //    return Observable.FromEventPattern<EventHandler, EventArgs>(
-            //        h => window.LocationChanged += h,
-            //        h => window.LocationChanged -= h)
-            //      .Select(ep => ep.EventArgs);
-            //}
+            return Observable.FromEventPattern<MouseEventArgs>(form, "MouseMove").Select(e => e.EventArgs);
         }
+
+        public static IObservable<MouseEventArgs> MouseDownAsObservable(this Form form)
+        {
+            return Observable.FromEventPattern<MouseEventArgs>(form, "MouseDown").Select(e => e.EventArgs);
+        }
+
+        public static IObservable<MouseEventArgs> MouseUpAsObservable(this Form form)
+        {
+            return Observable.FromEventPattern<MouseEventArgs>(form, "MouseUp").Select(e => e.EventArgs);
+        }
+
+        // Returns an observable sequence of a framework element's
+        // SizeChanged events.
+        public static IObservable<EventArgs> ObserveResize(this Form form)
+        {
+            return Observable.FromEventPattern<EventArgs>(form, "SizeChanged").Select(e => e.EventArgs);
+        }
+
+        //// Returns an observable sequence of a window's 
+        //// LocationChanged events.
+        //public static IObservable<EventPattern<EventArgs>>
+        //    ObserveLocationChanged(this Window window)
+        //{
+        //    return Observable.FromEventPattern<EventHandler, EventArgs>(
+        //        h => window.LocationChanged += h,
+        //        h => window.LocationChanged -= h)
+        //      .Select(ep => ep.EventArgs);
+        //}
     }
+}
 
