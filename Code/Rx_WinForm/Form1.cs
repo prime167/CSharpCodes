@@ -16,16 +16,16 @@ namespace Rx_WinForm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Winform的drag(等于按下左键鼠标移动直到放开)
+            // winform的drag(等于按下左键鼠标移动直到放开)
             var drag = from down in this.MouseDownAsObservable()
                        from move in this.MouseMoveAsObservable().TakeUntil(this.MouseUpAsObservable())
                        select new { move.X, move.Y };
 
             // 取得TextBox控件的TextChanged事件
-            IObservable<string> textChanage = Observable.FromEventPattern<EventArgs>(textBox1, "TextChanged")
+            IObservable<string> textChange = Observable.FromEventPattern<EventArgs>(textBox1, "TextChanged")
                 .Select(_ => textBox1.Text)
                 .Throttle(TimeSpan.FromSeconds(1)); // 等待1秒钟如果没有别的变化则使用最近的变化值
-            textChanage.Subscribe(v => MessageBox.Show(textBox1.Text));
+            textChange.Subscribe(v => MessageBox.Show(textBox1.Text));
 
             drag.Subscribe(m => Text = ($"{m.X} {m.Y}"));
 
