@@ -16,12 +16,11 @@ namespace EventExample
     {
         public void MakeAlert(object sender, BoiledEventArgs e)
         {
-            Heater heater = (Heater)sender;     //这里是不是很熟悉呢？
-
             //访问 sender 中的公共字段
-            Console.WriteLine($"Alarm：{heater.Area} - {heater.Type}: ");
+            if (sender is Heater heater) Console.WriteLine($"Alarm：{heater.Area} - {heater.Type}: ");
             Console.WriteLine($"Alarm: 嘀嘀嘀，水已经 {e.Temperature} 度了：");
             Console.WriteLine();
+
         }
     }
 }
