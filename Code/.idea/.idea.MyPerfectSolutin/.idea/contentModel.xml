@@ -1,0 +1,520 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\code\CSarpCodes\code" t="IncludeFlat">
+      <e p="Algorithms" t="IncludeRecursive">
+        <e p="Algorithms.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BinaryTree" t="Include">
+          <e p="Node.cs" t="Include" />
+          <e p="Tree.cs" t="Include" />
+        </e>
+        <e p="Extensions.cs" t="Include" />
+        <e p="JosephusProblem.cs" t="Include" />
+        <e p="LinkedList.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Algorithms.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Other.cs" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Search.cs" t="Include" />
+        <e p="Sort.cs" t="Include" />
+      </e>
+      <e p="APMPattern" t="IncludeRecursive">
+        <e p="APMPattern.csproj" t="IncludeRecursive" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="AsyncDeadlock" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="AsyncDeadlock.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FormDeadLock.cs" t="Include" />
+        <e p="FormDeadLock.Designer.cs" t="Include" />
+        <e p="FormDeadLock.resx" t="Include" />
+        <e p="FormFix1.cs" t="Include" />
+        <e p="FormFix1.Designer.cs" t="Include" />
+        <e p="FormFix1.resx" t="Include" />
+        <e p="FormFix2.cs" t="Include" />
+        <e p="FormFix2.Designer.cs" t="Include" />
+        <e p="FormFix2.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="AsyncWithProgress" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="AsyncWithProgress.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="AsyncWithProgress1" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="AsyncWithProgress1.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+      </e>
+      <e p="Client" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="Client.cs" t="Include" />
+        <e p="Client.csproj" t="IncludeRecursive" />
+        <e p="Client01.jpg" t="Include" />
+        <e p="Client02.jpg" t="Include" />
+        <e p="Client03.jpg" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ServerClient.cs" t="Include" />
+      </e>
+      <e p="ClientConsole" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Client.cs" t="Include" />
+        <e p="ClientConsole.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ServerClient.cs" t="Include" />
+      </e>
+      <e p="Common" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Common.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RequestHandler.cs" t="Include" />
+      </e>
+      <e p="CoreTest" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="HomeController.cs" t="Include" />
+        </e>
+        <e p="CoreTest.csproj" t="IncludeRecursive" />
+        <e p="Models" t="Include">
+          <e p="ErrorViewModel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="CoreTest.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
+          <e p="Home" t="Include">
+            <e p="Index.cshtml" t="Include" />
+            <e p="Privacy.cshtml" t="Include" />
+          </e>
+          <e p="Shared" t="Include">
+            <e p="_CookieConsentPartial.cshtml" t="Include" />
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+            <e p="Error.cshtml" t="Include" />
+          </e>
+        </e>
+        <e p="wwwroot" t="Include">
+          <e p="css" t="Include">
+            <e p="site.css" t="Include" />
+          </e>
+          <e p="favicon.ico" t="Include" />
+          <e p="js" t="Include">
+            <e p="site.js" t="Include" />
+          </e>
+          <e p="lib" t="Include">
+            <e p="bootstrap" t="Include">
+              <e p="dist" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
+              <e p="LICENSE" t="Include" />
+            </e>
+            <e p="jquery" t="Include">
+              <e p="dist" t="Include">
+                <e p="jquery.js" t="Include" />
+                <e p="jquery.min.js" t="Include" />
+                <e p="jquery.min.map" t="Include" />
+              </e>
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+            <e p="jquery-validation" t="Include">
+              <e p="dist" t="Include">
+                <e p="additional-methods.js" t="Include" />
+                <e p="additional-methods.min.js" t="Include" />
+                <e p="jquery.validate.js" t="Include" />
+                <e p="jquery.validate.min.js" t="Include" />
+              </e>
+              <e p="LICENSE.md" t="Include" />
+            </e>
+            <e p="jquery-validation-unobtrusive" t="Include">
+              <e p="jquery.validate.unobtrusive.js" t="Include" />
+              <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+              <e p="LICENSE.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="CSharp" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CSharp.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="EventExample" t="IncludeRecursive">
+        <e p="Alarm.cs" t="Include" />
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="BoiledEventArgs.cs" t="Include" />
+        <e p="Display.cs" t="Include" />
+        <e p="Event Example.csproj" t="IncludeRecursive" />
+        <e p="Heater.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="FSharpTest" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FSharpTest.fsproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.fs" t="Include" />
+      </e>
+      <e p="Hello.en-us" t="IncludeRecursive">
+        <e p="Hello.cs" t="Include" />
+        <e p="Hello.en-us.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Hello.Interface" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Hello.Interface.csproj" t="IncludeRecursive" />
+        <e p="IHello.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Hello.zh-cn" t="IncludeRecursive">
+        <e p="Hello.cs" t="Include" />
+        <e p="Hello.zh-cn.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Hello.zh-cn_V2" t="IncludeRecursive">
+        <e p="Hello.cs" t="Include" />
+        <e p="Hello.zh-cn_V2.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HttpHandlerAndModule" t="IncludeRecursive">
+        <e p="b.aspx" t="Include" />
+        <e p="b.aspx.cs" t="Include" />
+        <e p="b.aspx.designer.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="HttpHandlerAndModule.csproj" t="IncludeRecursive" />
+        <e p="index.html" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="PublishProfiles" t="Include">
+            <e p="local.pubxml" t="Include" />
+          </e>
+        </e>
+        <e p="Web.config" t="Include" />
+        <e p="Web.Debug.config" t="Include" />
+        <e p="Web.Release.config" t="Include" />
+      </e>
+      <e p="HttpHandlerAndModule_" t="Include" />
+      <e p="MultiThread" t="Include" />
+      <e p="MultiValueDictionary" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="MultiValueDictionary.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="Mutex" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Mutex.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="MyHandlerAndModule" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CspxHandler.cs" t="Include" />
+        <e p="MyHandlerAndModule.csproj" t="IncludeRecursive" />
+        <e p="MyHttpModule1.cs" t="Include" />
+        <e p="MyHttpModule2.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="MyPerfectSolutin.sln" t="IncludeFlat" />
+      <e p="Ninject" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="CustomModule.cs" t="Include" />
+        <e p="IDrink.cs" t="Include" />
+        <e p="IEditor.cs" t="Include" />
+        <e p="LinuxProgrammer.cs" t="Include" />
+        <e p="MicrosoftProgrammer.cs" t="Include" />
+        <e p="Milk.cs" t="Include" />
+        <e p="Ninject.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Programmer.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Tea.cs" t="Include" />
+        <e p="Vi.cs" t="Include" />
+        <e p="VisualStudio.cs" t="Include" />
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Reflection" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Reflection.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Reflection_" t="Include" />
+      <e p="Remoting" t="Include" />
+      <e p="RemotingClient" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RemotingClient.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="RemotingObject" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RemoteObject.cs" t="Include" />
+        <e p="RemotingObject.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="RemotingServer" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RemotingServer.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Rx" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Rx.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Rx_WinForm" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Rx_WinForm.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Server" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ProtocolHelper.cs" t="Include" />
+        <e p="RemoteClient.cs" t="Include" />
+        <e p="Server.cs" t="Include" />
+        <e p="Server.csproj" t="IncludeRecursive" />
+        <e p="Server01.jpg" t="Include" />
+        <e p="Server02.jpg" t="Include" />
+        <e p="Server03.jpg" t="Include" />
+      </e>
+      <e p="ServerConsole" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="RemoteClient.cs" t="Include" />
+        <e p="Server.cs" t="Include" />
+        <e p="ServerConsole.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Socket" t="Include" />
+      <e p="Socket2" t="Include" />
+      <e p="SocketClient" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="SocketClient.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SocketFileServer" t="Include" />
+      <e p="SocketFileServer.Common" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FileProtocol.cs" t="Include" />
+        <e p="FileRequestMode.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="ProtocolHandler.cs" t="Include" />
+        <e p="SendStatus.cs" t="Include" />
+        <e p="SocketFileServer.Common.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="SocketServer" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="Server.cs" t="Include" />
+        <e p="SocketServer.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TCP" t="Include" />
+      <e p="TcpClientDemo" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TcpClientDemo.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TcpListenerDemo" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+        <e p="TcpListenerDemo.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="Web" t="Include" />
+    </e>
+    <e p="C:\Users\win7vm2\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\win7vm2\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_MyPerfectSolutin.-1263936095.00" t="ExcludeRecursive" />
+  </component>
+</project>
