@@ -38,6 +38,30 @@ namespace AspNetCoreGrpcClient
                 Console.WriteLine("Streaming was cancelled from the client!");
             }
 
+            var bathCat = client.SayMoreHello1();
+            var bathCatRespTask = Task.Run(async () =>
+            {
+                await foreach (var resp in bathCat.ResponseStream.ReadAllAsync())
+                {
+                    Console.WriteLine(resp.Message);
+                }
+            });
+
+            for (int i = 0; i < 10; i++)
+            {
+                await bathCat.RequestStream.WriteAsync(new HelloRequest { Name = "Jack" + i});
+            }
+
+            //发送完毕
+            await bathCat.RequestStream.CompleteAsync();
+            Console.WriteLine("客户端已发送完10个需要安检的人");
+            Console.WriteLine("接收安检结果：");
+
+            //开始接收响应
+            await bathCatRespTask;
+
+            Console.WriteLine("安检完毕");
+
             var catClient = new LuCat.LuCatClient(channel);
             var catReply = await catClient.SuckingCatAsync(new Empty());
             Console.WriteLine("调用撸猫服务：" + catReply.Message);
