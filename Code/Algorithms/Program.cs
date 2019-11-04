@@ -6,19 +6,19 @@ using Algorithms.BinaryTree;
 
 namespace Algorithms
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            var a = Enumerable.Range(1, 10).ToList();
+            List<int> a = Enumerable.Range(1, 10).ToList();
             a.Shuffle();
 
             ShowSort("冒泡排序", a, Sort.BubbleSort);
-            ShowSort("选择排序", a, Sort.SellectionSort);
+            ShowSort("选择排序", a, Sort.SelectionSort);
             ShowSort("插入排序", a, Sort.InsertionSort);
             ShowSort("Shell排序", a, Sort.ShellSort);
             ShowSort("归并排序", a, Sort.MergeSort);
-            var dd = ShowSort("快速排序", a, Sort.QuickSort);
+            List<int> dd = ShowSort("快速排序", a, Sort.QuickSort);
 
             var find = 5;
             Console.WriteLine("\n二分查找:");
@@ -67,7 +67,7 @@ namespace Algorithms
             n7.Next = n8;
             n8.Next = n2;
 
-            var hasLoop = List.HasLoop(n1);
+            bool hasLoop = List.HasLoop(n1);
             Console.WriteLine(hasLoop);
 
             Console.WriteLine("\n tree:");
@@ -128,7 +128,7 @@ namespace Algorithms
             Other.FindSame(arrA, arrB);
             Console.WriteLine(Other.HasSame(arrA, arrB));
 
-            var x = arrA.Intersect(arrB);
+            IEnumerable<int> x = arrA.Intersect(arrB);
             x.ForAll(Console.WriteLine);
 
             var s = "this is a test!";
@@ -147,13 +147,13 @@ namespace Algorithms
             Console.WriteLine();
             Console.WriteLine(sortMethod);
 
-            var copy = (from x in a
+            List<T> copy = (from x in a
                         select x).ToList();
-            var b = copy.Concat();
+            string b = copy.Concat();
             Console.WriteLine("sorting:");
-            var sorted = S(copy);
+            List<T> sorted = S(copy);
             sw.Stop();
-            var c = sorted.Concat();
+            string c = sorted.Concat();
             Console.WriteLine(c);
             return copy;
         }

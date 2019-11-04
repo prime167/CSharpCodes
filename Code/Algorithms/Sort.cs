@@ -35,7 +35,7 @@ namespace Algorithms
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
-        public static List<T> SellectionSort<T>(List<T> list) where T : IComparable
+        public static List<T> SelectionSort<T>(List<T> list) where T : IComparable
         {
             var len = list.Count;
             for (int i = 0; i < len; i++)
@@ -164,9 +164,9 @@ namespace Algorithms
             return list;
         }
 
-        static public void QuickSort_Recursive<T>(List<T> arr, int left, int right) where T : IComparable
+        public static void QuickSort_Recursive<T>(List<T> arr, int left, int right) where T : IComparable
         {
-            // For Recusrion
+            // For Recursion
             if (left < right)
             {
                 int pivot = Partition(arr, left, right);
@@ -179,7 +179,7 @@ namespace Algorithms
             }
         }
 
-        static public int Partition<T>(List<T> numbers, int left, int right) where T : IComparable
+        public static int Partition<T>(List<T> numbers, int left, int right) where T : IComparable
         {
             T pivot = numbers[left];
             while (true)
