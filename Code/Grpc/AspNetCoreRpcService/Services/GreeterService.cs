@@ -26,7 +26,7 @@ namespace AspNetCoreGrpcService.Services
         public override async Task SayMoreHello(HelloRequest request, IServerStreamWriter<HelloReply> responseStream, ServerCallContext context)
         {
             var contextCancellationToken = context.CancellationToken;
-            foreach (var x in Enumerable.Range(1, 10))
+            foreach (int x in Enumerable.Range(1, 10))
             {
                 if (contextCancellationToken.IsCancellationRequested) return;
                 await responseStream.WriteAsync(new HelloReply
@@ -48,7 +48,7 @@ namespace AspNetCoreGrpcService.Services
             }
 
             //遍历队列开始安检
-            while (helloQueue.TryDequeue(out var name))
+            while (helloQueue.TryDequeue(out string name))
             {
                 if (name.Contains("5"))
                 {
