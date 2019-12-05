@@ -1,12 +1,12 @@
 ﻿namespace Algorithms.BinaryTree
 {
-    public class Node
+    public class TreeNode
     {
         public int data;
-        public Node lc;
-        public Node rc;
+        public TreeNode Left;
+        public TreeNode Right;
 
-        public Node(int d)
+        public TreeNode(int d)
         {
             data = d;
         }

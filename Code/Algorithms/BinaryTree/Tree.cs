@@ -5,91 +5,91 @@ namespace Algorithms.BinaryTree
 {
     public static class Tree
     {
-        public static void WideFirstTraverse(Node root)
+        public static void WideFirstTraverse(TreeNode root)
         {
-            var queue = new Queue<Node>();
+            var queue = new Queue<TreeNode>();
             queue.Enqueue(root);
             while (queue.Count > 0)
             {
                 var n = queue.Dequeue();
                 Console.WriteLine(n.data);
-                if (n.lc != null)
+                if (n.Left != null)
                 {
-                    queue.Enqueue(n.lc);
+                    queue.Enqueue(n.Left);
                 }
 
-                if (n.rc != null)
+                if (n.Right != null)
                 {
-                    queue.Enqueue(n.rc);
+                    queue.Enqueue(n.Right);
                 }
             }
         }
 
-        public static void DepthFirstTraverse(Node root)
+        public static void DepthFirstTraverse(TreeNode root)
         {
-            var stack = new Stack<Node>();
+            var stack = new Stack<TreeNode>();
             stack.Push(root);
             while (stack.Count > 0)
             {
                 var n = stack.Pop();
                 Console.WriteLine(n.data);
-                if (n.rc != null)
+                if (n.Right != null)
                 {
-                    stack.Push(n.rc);
+                    stack.Push(n.Right);
                 }
 
-                if (n.lc != null)
+                if (n.Left != null)
                 {
-                    stack.Push(n.lc);
+                    stack.Push(n.Left);
                 }
             }
         }
 
-        public static void PreOrder(Node d)
+        public static void PreOrder(TreeNode d)
         {
             Console.WriteLine(d.data);
-            if (d.lc != null)
+            if (d.Left != null)
             {
-                PreOrder(d.lc);
+                PreOrder(d.Left);
             }
 
-            if (d.rc != null)
+            if (d.Right != null)
             {
-                PreOrder(d.rc);
+                PreOrder(d.Right);
             }
         }
 
-        public static void Inorder(Node d)
+        public static void Inorder(TreeNode d)
         {
-            if (d.lc != null)
+            if (d.Left != null)
             {
-                Inorder(d.lc);
+                Inorder(d.Left);
             }
 
             Console.WriteLine(d.data);
 
-            if (d.rc != null)
+            if (d.Right != null)
             {
-                Inorder(d.rc);
+                Inorder(d.Right);
             }
         }
 
-        public static void PostOrder(Node d)
+        public static void PostOrder(TreeNode d)
         {
-            if (d.lc != null)
+            if (d.Left != null)
             {
-                PostOrder(d.lc);
+                PostOrder(d.Left);
             }
 
-            if (d.rc != null)
+            if (d.Right != null)
             {
-                PostOrder(d.rc);
+                PostOrder(d.Right);
             }
 
             Console.WriteLine(d.data);
         }
 
-        public static int TreeDepth(Node n)
+        public static int TreeDepth(TreeNode n)
         {
             if (n == null)
             {
@@ -97,8 +97,8 @@ namespace Algorithms.BinaryTree
             }
 
             Console.WriteLine(n.data);
-            int ld = TreeDepth(n.lc);
-            int rd = TreeDepth(n.rc);
+            int ld = TreeDepth(n.Left);
+            int rd = TreeDepth(n.Right);
             return 1 + (ld > rd ? ld : rd);
         }
     }

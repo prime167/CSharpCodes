@@ -73,39 +73,39 @@ namespace Algorithms
             Console.WriteLine("\n tree:");
             // tree
             Console.WriteLine("=============tree==========");
-            var root = new Node(0);
-            var p1 = new Node(1);
-            var p2 = new Node(2);
-            var p3 = new Node(3);
-            var p4 = new Node(4);
-            var p5 = new Node(5);
-            var p6 = new Node(6);
-            var p7 = new Node(7);
-            var p8 = new Node(8);
-            var p9 = new Node(9);
-            var p10 = new Node(10);
-            var p11 = new Node(11);
-            var p12 = new Node(12);
-            var p13 = new Node(13);
-            var p14 = new Node(14);
-            var p15 = new Node(15);
-            var p16 = new Node(16);
+            var root = new TreeNode(0);
+            var p1 = new TreeNode(1);
+            var p2 = new TreeNode(2);
+            var p3 = new TreeNode(3);
+            var p4 = new TreeNode(4);
+            var p5 = new TreeNode(5);
+            var p6 = new TreeNode(6);
+            var p7 = new TreeNode(7);
+            var p8 = new TreeNode(8);
+            var p9 = new TreeNode(9);
+            var p10 = new TreeNode(10);
+            var p11 = new TreeNode(11);
+            var p12 = new TreeNode(12);
+            var p13 = new TreeNode(13);
+            var p14 = new TreeNode(14);
+            var p15 = new TreeNode(15);
+            var p16 = new TreeNode(16);
 
-            root.lc = p1;
-            root.rc = p2;
-            p1.lc = p3;
-            p1.rc = p4;
-            p2.lc = p5;
-            p2.rc = p6;
-            p3.lc = p7;
-            p3.rc = p8;
-            p4.lc = p9;
-            p4.rc = p10;
-            p5.lc = p11;
-            p5.rc = p12;
-            p6.lc = p13;
-            p6.rc = p14;
-            p14.rc = p15;
+            root.Left = p1;
+            root.Right = p2;
+            p1.Left = p3;
+            p1.Right = p4;
+            p2.Left = p5;
+            p2.Right = p6;
+            p3.Left = p7;
+            p3.Right = p8;
+            p4.Left = p9;
+            p4.Right = p10;
+            p5.Left = p11;
+            p5.Right = p12;
+            p6.Left = p13;
+            p6.Right = p14;
+            p14.Right = p15;
 
             Tree.WideFirstTraverse(root);
             Console.WriteLine("==========depth first========");
@@ -137,7 +137,51 @@ namespace Algorithms
             var ls = new decimal[] { -1, 2, -3, -5, 3, 4, -2, 3 };
             Console.WriteLine(ls.ToList().FindBestSubsequence(out int start, out int end));
             Console.WriteLine("start index:{0}, end index:{1}", start, end);
-            Console.ReadLine();
+
+            Console.WriteLine("双端链表：");
+            DoubleEndedList list = new DoubleEndedList();
+            list.InsertHead(2);
+            list.InsertHead(1);
+            list.InsertTail(3);
+            list.InsertTail(4);
+            list.DisplayList();
+
+            list.DeleteTail();
+            list.DisplayList();
+
+            list.DeleteTail();
+            list.DisplayList();
+
+            list.DeleteTail();
+            list.DisplayList();
+
+            list.DeleteTail();
+            list.DisplayList();
+
+            list.DeleteTail();
+            list.DisplayList();
+
+            Console.WriteLine("delete head");
+            list.InsertHead(2);
+            list.InsertHead(1);
+            list.InsertTail(3);
+            list.InsertTail(4);
+            list.DisplayList();
+
+            list.DeleteHead();
+            list.DisplayList();
+
+            list.DeleteHead();
+            list.DisplayList();
+
+            list.DeleteHead();
+            list.DisplayList();
+
+            list.DeleteHead();
+            list.DisplayList();
+
+            list.DeleteHead();
+            list.DisplayList();
         }
 
         private static List<T> ShowSort<T>(string sortMethod, List<T> a, Func<List<T>, List<T>> S)
