@@ -75,7 +75,7 @@ namespace Algorithms
         // 删除表尾
         public void DeleteTail()
         {
-            if (Head == null)
+            if (Tail == null)
             {
                 return;
             }
