@@ -19,18 +19,6 @@ namespace Algorithms
             ShowSort("归并排序", a, Sort.MergeSort);
             List<int> dd = ShowSort("快速排序", a, Sort.QuickSort);
 
-            var find = 5;
-            Console.WriteLine("\n二分查找:");
-            Console.WriteLine("find {0} in {1}", find, dd.Concat());
-
-            var q = Search.binary_search_first_position1(dd.ToArray(), dd.Count, find);
-            Console.WriteLine("index: {0}", q);
-
-            Console.WriteLine("\n");
-            a.Shuffle();
-            Console.WriteLine(a.Concat());
-            Console.WriteLine(Search.FindSecond(a));
-
             Console.WriteLine("约瑟夫环问题");
             var e = new JosephusProblem();
             int[] aj = e.Jose(41, 2);
