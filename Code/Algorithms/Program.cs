@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Algorithms.BinaryTree;
 
 namespace Algorithms
 {
@@ -70,59 +69,6 @@ namespace Algorithms
             bool hasLoop = List.HasLoop(n1);
             Console.WriteLine(hasLoop);
 
-            Console.WriteLine("\n tree:");
-            // tree
-            Console.WriteLine("=============tree==========");
-            var root = new TreeNode(0);
-            var p1 = new TreeNode(1);
-            var p2 = new TreeNode(2);
-            var p3 = new TreeNode(3);
-            var p4 = new TreeNode(4);
-            var p5 = new TreeNode(5);
-            var p6 = new TreeNode(6);
-            var p7 = new TreeNode(7);
-            var p8 = new TreeNode(8);
-            var p9 = new TreeNode(9);
-            var p10 = new TreeNode(10);
-            var p11 = new TreeNode(11);
-            var p12 = new TreeNode(12);
-            var p13 = new TreeNode(13);
-            var p14 = new TreeNode(14);
-            var p15 = new TreeNode(15);
-            var p16 = new TreeNode(16);
-
-            root.Left = p1;
-            root.Right = p2;
-            p1.Left = p3;
-            p1.Right = p4;
-            p2.Left = p5;
-            p2.Right = p6;
-            p3.Left = p7;
-            p3.Right = p8;
-            p4.Left = p9;
-            p4.Right = p10;
-            p5.Left = p11;
-            p5.Right = p12;
-            p6.Left = p13;
-            p6.Right = p14;
-            p14.Right = p15;
-
-            Tree.WideFirstTraverse(root);
-            Console.WriteLine("==========depth first========");
-            Tree.DepthFirstTraverse(root);
-            Console.WriteLine("==========pre: root left right(equal to depthFirst)===========");
-            Tree.PreOrder(root);
-            Console.WriteLine("==========in: left root right===========");
-            Tree.Inorder(root);
-            Console.WriteLine("==========post: left right root===========");
-            Tree.PostOrder(root);
-
-            Console.WriteLine();
-            Console.WriteLine("tree depth");
-            int dep = Tree.TreeDepth(root);
-            Console.WriteLine(dep.ToString());
-
-            Console.WriteLine();
             var arrA = new[] { 1, 2, 5, 7, 8, 9, 23, 56 };
             var arrB = new[] { 2, 4, 5, 9, 23, 145 };
             Other.FindSame(arrA, arrB);

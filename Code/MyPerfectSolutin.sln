@@ -68,8 +68,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpClientDemo", "TcpClientD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpListenerDemo", "TcpListenerDemo\TcpListenerDemo.csproj", "{3C39A648-6976-4A3F-9606-7BB97B8C15D4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp", "CSharp\CSharp.csproj", "{2FA54D1A-104D-4403-BB94-01F3A6037D06}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{11552831-BBF2-45E2-B0BD-6025AEA1CCBB}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "FSharpTest", "FSharpTest\FSharpTest.fsproj", "{4460B69A-34B6-4731-A49E-CE33869B4F57}"
@@ -98,7 +96,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Grpc", "Grpc", "{11F1B010-A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreGrpcService", "Grpc\AspNetCoreRpcService\AspNetCoreGrpcService.csproj", "{92B42390-3F0A-475D-9A47-5A859695472F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreGrpcClient", "Grpc\AspNetCoreGrpcClient\AspNetCoreGrpcClient.csproj", "{7627A7D3-22A3-43EA-8AD5-F58665581303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreGrpcClient", "Grpc\AspNetCoreGrpcClient\AspNetCoreGrpcClient.csproj", "{7627A7D3-22A3-43EA-8AD5-F58665581303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csharp", "Csharp\Csharp.csproj", "{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -202,10 +202,6 @@ Global
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C39A648-6976-4A3F-9606-7BB97B8C15D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2FA54D1A-104D-4403-BB94-01F3A6037D06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4460B69A-34B6-4731-A49E-CE33869B4F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4460B69A-34B6-4731-A49E-CE33869B4F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4460B69A-34B6-4731-A49E-CE33869B4F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -250,6 +246,10 @@ Global
 		{7627A7D3-22A3-43EA-8AD5-F58665581303}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7627A7D3-22A3-43EA-8AD5-F58665581303}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7627A7D3-22A3-43EA-8AD5-F58665581303}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

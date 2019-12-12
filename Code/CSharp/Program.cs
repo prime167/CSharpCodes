@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 
-namespace CSharp
+namespace CSharp1
 {
     internal class Program
     {
@@ -48,7 +48,6 @@ namespace CSharp
             bytes[2] = 45; // OK
             Assert.Equal(arr[2], bytes[2]);
             Assert.Equal(45, arr[2]);
-            Console.ReadLine();
         }
 
         private static void Print(Dog d)
