@@ -83,51 +83,6 @@ namespace Algorithms
             var ls = new decimal[] { -1, 2, -3, -5, 3, 4, -2, 3 };
             Console.WriteLine(ls.ToList().FindBestSubsequence(out int start, out int end));
             Console.WriteLine("start index:{0}, end index:{1}", start, end);
-
-            Console.WriteLine("双端链表：");
-            DoubleEndedList list = new DoubleEndedList();
-            list.InsertHead(2);
-            list.InsertHead(1);
-            list.InsertTail(3);
-            list.InsertTail(4);
-            list.DisplayList();
-
-            list.DeleteTail();
-            list.DisplayList();
-
-            list.DeleteTail();
-            list.DisplayList();
-
-            list.DeleteTail();
-            list.DisplayList();
-
-            list.DeleteTail();
-            list.DisplayList();
-
-            list.DeleteTail();
-            list.DisplayList();
-
-            Console.WriteLine("delete head");
-            list.InsertHead(2);
-            list.InsertHead(1);
-            list.InsertTail(3);
-            list.InsertTail(4);
-            list.DisplayList();
-
-            list.DeleteHead();
-            list.DisplayList();
-
-            list.DeleteHead();
-            list.DisplayList();
-
-            list.DeleteHead();
-            list.DisplayList();
-
-            list.DeleteHead();
-            list.DisplayList();
-
-            list.DeleteHead();
-            list.DisplayList();
         }
 
         private static List<T> ShowSort<T>(string sortMethod, List<T> a, Func<List<T>, List<T>> S)
