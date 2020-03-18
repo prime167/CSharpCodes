@@ -2,7 +2,7 @@
 using System;
 using Xunit;
 
-namespace CSharp1
+namespace Csharp
 {
     internal class Program
     {

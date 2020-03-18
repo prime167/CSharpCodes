@@ -20,7 +20,6 @@ namespace EventExample
             if (sender is Heater heater) Console.WriteLine($"Alarm：{heater.Area} - {heater.Type}: ");
             Console.WriteLine($"Alarm: 嘀嘀嘀，水已经 {e.Temperature} 度了：");
             Console.WriteLine();
-
         }
     }
 }
