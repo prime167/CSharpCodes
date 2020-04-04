@@ -15,7 +15,7 @@ namespace AsyncStream
             var factory = new AsyncNumberFactory();
 
             Console.WriteLine(nameof(ThreadId) +$" {ThreadId}");
-            await foreach (var number in factory.GenerateNumbers(10))
+            await foreach (var number in factory.GenerateNumbers(30))
             {
                 Console.WriteLine($"{ThreadId} {number}");
             }
