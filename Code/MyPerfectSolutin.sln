@@ -100,7 +100,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreGrpcClient", "Grp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csharp", "Csharp\Csharp.csproj", "{DBFA3B83-67DD-49C2-BCEB-AA652235E2BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncStream", "AsyncStream\AsyncStream.csproj", "{D8FC74F6-9711-45AF-83C1-D6525487F0DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsyncStream", "AsyncStream\AsyncStream.csproj", "{D8FC74F6-9711-45AF-83C1-D6525487F0DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3F066D8-B1AE-4D8C-BB03-9AFC6C684352}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
