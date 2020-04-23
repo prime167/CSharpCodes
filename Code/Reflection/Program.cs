@@ -50,7 +50,7 @@ namespace Reflection
             Type typeOfClass = typeof(MyClass);
             if (typeOfClass.IsAbstract)
             {
-                Console.WriteLine("abtract class, can not create instance");
+                Console.WriteLine("abstract class, can not create instance");
                 Console.ReadLine();
             }
 
@@ -81,7 +81,7 @@ namespace Reflection
             Type myTypeObj1 = myClassObj1.GetType();
             PrintAttributeInfo(myTypeObj1);
 
-            // load assembly dynamicly
+            // load assembly dynamically
             string language = ConfigurationManager.AppSettings["language"] ?? "zh-cn";
             string helloType = "Hello.Hello";
             Assembly assembly = Assembly.Load("Hello." + language); // load assembly
