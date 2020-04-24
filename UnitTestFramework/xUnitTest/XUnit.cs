@@ -8,7 +8,7 @@ namespace xUnitTest
         [Theory]
         [InlineData(1, 22)]
         [InlineData(-1, 23)]
-        [InlineData(int.MaxValue, 0)]
+        [InlineData(int.MaxValue, 2)]
         public void TestAdd(int a, int b)
         {
             var c = new MyLib.MyLib();
