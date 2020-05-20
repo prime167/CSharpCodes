@@ -123,6 +123,24 @@ namespace Csharp
 
             return ref array[position];
         }
+
+        // C# 9.0 "is not" patterns
+        public static bool IsNotNull<T>(T item) => item is not null;
+
+        // C# 9.0 Relational patterns
+        public static LifeStage LifeStageAtAge(int age) =>
+            age switch
+            {
+                < 0 => LifeStage.Prenatal,
+                < 2 => LifeStage.Infant,
+                < 4 => LifeStage.Toddler,
+                < 6 => LifeStage.EarlyChild,
+                < 12 => LifeStage.MiddleChild,
+                < 20 => LifeStage.Adolescent,
+                < 40 => LifeStage.EarlyAdult,
+                < 65 => LifeStage.MiddleAdult,
+                _ => LifeStage.LateAdult,
+            };
     }
 
     public class Dog
@@ -162,5 +180,19 @@ namespace Csharp
             }
             return ref nobook;
         }
+    }
+
+
+    public enum LifeStage
+    {
+        Prenatal,
+        Infant,
+        Toddler,
+        EarlyChild,
+        MiddleChild,
+        Adolescent,
+        EarlyAdult,
+        MiddleAdult,
+        LateAdult
     }
 }
