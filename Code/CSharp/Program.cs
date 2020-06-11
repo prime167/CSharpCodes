@@ -11,7 +11,7 @@ namespace Csharp
             var collection = new BookCollection();
             ref readonly var book = ref collection.GetBookByTitle("Tale of Two Cities, A");
             //book = new Book(); // Line 1
-            //book.Author = "Konrad Kokosa"; // Line 2
+            //book.Author = "Konrad Jane"; // Line 2
             Console.WriteLine(book.Author);
 
             var d = new Dog
