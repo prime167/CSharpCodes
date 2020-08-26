@@ -23,6 +23,8 @@ namespace Csharp
             Print(d);
             Print(3);
 
+            Dog dd = new ();
+
             var data = new int[10];
             Console.WriteLine($"Before change, element at 2 is: {data[2]}");
             ref int value = ref ElementAt(data, 2);
@@ -182,6 +184,15 @@ namespace Csharp
         }
     }
 
+    public record Person
+    {
+        public string FirstName { get; init; }
+        public string LastName { get; init; }
+        public string Address { get; init; }
+        public string City { get; init; }
+        public string FavoriteColor { get; init; }
+        // and so on...
+    }
 
     public enum LifeStage
     {
