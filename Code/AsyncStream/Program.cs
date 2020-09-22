@@ -8,14 +8,22 @@ namespace AsyncStream
     class Program
     {
         private static int ThreadId => Thread.CurrentThread.ManagedThreadId;
+        const int Count = 10;
 
         static async Task Main(string[] args)
         {
-            //var factory = new NumberFactory();
-            var factory = new AsyncNumberFactory();
+            var factory1 = new NumberFactory();
+            var factory2 = new AsyncNumberFactory();
 
-            Console.WriteLine(nameof(ThreadId) +$" {ThreadId}");
-            await foreach (var number in factory.GenerateNumbers(30))
+            Console.WriteLine(nameof(ThreadId) + $" {ThreadId}");
+
+            foreach (var number in factory1.GenerateNumbers(Count))
+            {
+                Console.WriteLine($"{ThreadId} {number}");
+            }
+
+            Console.WriteLine("====================");
+            await foreach (var number in factory2.GenerateNumbers(Count))
             {
                 Console.WriteLine($"{ThreadId} {number}");
             }
@@ -24,25 +32,30 @@ namespace AsyncStream
         }
     }
 
-    public class NumberFactory
+    public abstract class NumberFactoryBase
+    {
+        public int Delay { get; set; } = 60;
+    }
+
+    public class NumberFactory : NumberFactoryBase
     {
         public IEnumerable<int> GenerateNumbers(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                Task.Delay(1000).Wait();
+                Task.Delay(Delay).Wait();
                 yield return i + 1;
             }
         }
     }
 
-    public class AsyncNumberFactory
+    public class AsyncNumberFactory : NumberFactoryBase
     {
         public async IAsyncEnumerable<int> GenerateNumbers(int count)
         {
             for (int i = 0; i < count; i++)
             {
-                await Task.Delay(1000);
+                await Task.Delay(Delay);
                 yield return i + 1;
             }
         }
