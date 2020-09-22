@@ -2,7 +2,7 @@
 
 namespace SocketFileServer.Common
 {
-    public struct FileProtocol
+    public readonly struct FileProtocol
     {
         public FileProtocol(FileRequestMode mode, int port, string fileName)
         {
@@ -19,7 +19,7 @@ namespace SocketFileServer.Common
 
         public override string ToString()
         {
-            return String.Format("<protocol><file name=\"{0}\" mode=\"{1}\" port=\"{2}\" /></protocol>", FileName, Mode, Port);
+            return $"<protocol><file name=\"{FileName}\" mode=\"{Mode}\" port=\"{Port}\" /></protocol>";
         }
     }
 }

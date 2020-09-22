@@ -72,8 +72,7 @@ namespace Server
             }
             catch (Exception ex)
             {
-                if (streamToClient != null)
-                    streamToClient.Dispose();
+                streamToClient?.Dispose();
 
                 client.Close();
                 Console.WriteLine(ex.Message);      // 捕获异常时退出程序
@@ -102,8 +101,7 @@ namespace Server
         // 发送文件
         private void SendFile(FileProtocol protocol)
         {
-            TcpClient localClient;
-            NetworkStream streamToClient = GetStreamToClient(protocol, out localClient);
+            NetworkStream streamToClient = GetStreamToClient(protocol, out var localClient);
 
             // 获得文件的路径
             string filePath = Environment.CurrentDirectory + "/" + protocol.FileName;

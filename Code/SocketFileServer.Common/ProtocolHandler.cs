@@ -10,11 +10,11 @@ namespace SocketFileServer.Common
     public class ProtocolHandler
     {
 
-        private string partialProtocal; // 保存不完整的协议
+        private string partialProtocol; // 保存不完整的协议
 
         public ProtocolHandler()
         {
-            partialProtocal = "";
+            partialProtocol = "";
         }
 
         public string[] GetProtocol(string input)
@@ -28,35 +28,33 @@ namespace SocketFileServer.Common
             if (outputList == null)
                 outputList = new List<string>();
 
-            if (String.IsNullOrEmpty(input))
+            if (string.IsNullOrEmpty(input))
                 return outputList.ToArray();
 
-            if (!String.IsNullOrEmpty(partialProtocal))
-                input = partialProtocal + input;
+            if (!string.IsNullOrEmpty(partialProtocol))
+                input = partialProtocol + input;
 
             string pattern = "(^<protocol>.*?</protocol>)";
 
             // 如果有匹配，说明已经找到了，是完整的协议
             if (Regex.IsMatch(input, pattern))
             {
-
                 // 获取匹配的值
                 string match = Regex.Match(input, pattern).Groups[0].Value;
                 outputList.Add(match);
-                partialProtocal = "";
+                partialProtocol = "";
 
                 // 缩短input的长度
                 input = input.Substring(match.Length);
 
                 // 递归调用
                 GetProtocol(input, outputList);
-
             }
             else
             {
                 // 如果不匹配，说明协议的长度不够，
                 // 那么先缓存，然后等待下一次请求
-                partialProtocal = input;
+                partialProtocol = input;
             }
 
             return outputList.ToArray();
