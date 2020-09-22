@@ -3,7 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// https://stephenhaunts.com/2014/10/16/using-async-and-await-to-update-the-ui-thread-part-2/
+/*
+https://stephenhaunts.com/2014/10/16/using-async-and-await-to-update-the-ui-thread-part-2/
+*/
+
 namespace AsyncWithProgress1
 {
     public partial class Form1 : Form

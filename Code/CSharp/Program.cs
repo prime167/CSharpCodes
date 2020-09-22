@@ -23,7 +23,7 @@ namespace Csharp
             Print(d);
             Print(3);
 
-            Dog dd = new ();
+            Dog dd = new (5);
 
             var data = new int[10];
             Console.WriteLine($"Before change, element at 2 is: {data[2]}");
@@ -95,7 +95,7 @@ namespace Csharp
         private static void Print(Dog d)
         {
             d.Id = 5;
-            d = new Dog();
+            d = new Dog(5);
             Console.WriteLine(d.Name ?? "No Name");
         }
 
@@ -150,6 +150,27 @@ namespace Csharp
         public int Id { get; set; }
 
         public string? Name { get; set; }
+
+        public Dog()
+        {
+
+        }
+
+        public Dog(int id)
+        {
+            Id = id;
+        }
+
+        public Dog(string name)
+        {
+            Name = name;
+        }
+
+        public Dog(int id,string name)
+        {
+            Id = id;
+            Name = name;
+        }
     }
 
     public struct Book // or struct
