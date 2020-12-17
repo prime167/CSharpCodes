@@ -11,10 +11,10 @@ namespace WindowsFormsApplication1
 
         // 隐藏文本框的光标
         [System.Runtime.InteropServices.DllImport("user32.dll")]
-        static extern bool HideCaret(IntPtr hWnd);
+        private static extern bool HideCaret(IntPtr hWnd);
 
-        const int Max = Int32.MaxValue;
-        CancellationTokenSource _cts;
+        const int Max = int.MaxValue;
+        private CancellationTokenSource _cts;
         private bool _running;
 
         public Form1()
@@ -52,7 +52,7 @@ namespace WindowsFormsApplication1
             label1.Text = ((DateTime.Now - _starTime).TotalSeconds).ToString("0.0");
         }
 
-        private async Task<double> DoJobAsync(IProgress<ProgressReport> progress, CancellationToken ct)
+        private static async Task<double> DoJobAsync(IProgress<ProgressReport> progress, CancellationToken ct)
         {
             var progressReport = new ProgressReport();
 
@@ -112,7 +112,7 @@ namespace WindowsFormsApplication1
         {
             if (_running)
             {
-                DialogResult r = MessageBox.Show("Job is still running ,are you sure to cancel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+                DialogResult r = MessageBox.Show(@"Job is still running ,are you sure to cancel?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
                 if (r == DialogResult.Yes)
                 {
                     _cts.Cancel();
@@ -126,7 +126,7 @@ namespace WindowsFormsApplication1
         {
             if (_running)
             {
-                DialogResult r = MessageBox.Show("Job is still running ,are you sure to close the window?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+                DialogResult r = MessageBox.Show(@"Job is still running ,are you sure to close the window?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
                 if (r == DialogResult.Yes)
                 {
                     _cts.Cancel();
