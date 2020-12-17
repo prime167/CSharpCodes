@@ -83,13 +83,22 @@ namespace Csharp
             string[] lastPhrase = words[6..]; // contains "the, "lazy" and "dog"
             foreach (var word in allWords)
                 Console.Write($"< {word} >");
+
             Console.WriteLine();
             foreach (var word in firstPhrase)
                 Console.Write($"< {word} >");
+
             Console.WriteLine();
             foreach (var word in lastPhrase)
                 Console.Write($"< {word} >");
+
             Console.WriteLine();
+
+            var p = new Person {FirstName = "Jon", LastName = "Doe"};
+            Console.WriteLine(p);
+            var p1 = p with{LastName = "Kate",FavoriteColor = "yellow"};
+            Console.WriteLine(p1);
+
         }
 
         private static void Print(Dog d)
@@ -188,8 +197,8 @@ namespace Csharp
     {
         private Book[] books =
         {
-              new Book { Title = "Call of the Wild, The", Author = "Jack London" },
-              new Book { Title = "Tale of Two Cities, A", Author = "Charles Dickens" }
+              new() { Title = "Call of the Wild, The", Author = "Jack London" },
+              new() { Title = "Tale of Two Cities, A", Author = "Charles Dickens" }
         };
 
         private Book nobook = default;
