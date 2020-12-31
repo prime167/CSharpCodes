@@ -98,7 +98,6 @@ namespace Csharp
             Console.WriteLine(p);
             var p1 = p with{LastName = "Kate",FavoriteColor = "yellow"};
             Console.WriteLine(p1);
-
         }
 
         private static void Print(Dog d)
