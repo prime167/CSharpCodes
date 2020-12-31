@@ -94,6 +94,7 @@ namespace Csharp
 
             Console.WriteLine();
 
+            var ls = LifeStageAtAge(99);
             var p = new Person {FirstName = "Jon", LastName = "Doe"};
             Console.WriteLine(p);
             var p1 = p with{LastName = "Kate",FavoriteColor = "yellow"};
