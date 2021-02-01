@@ -95,7 +95,7 @@ namespace Csharp
             Console.WriteLine();
 
             var ls = LifeStageAtAge(99);
-            var p = new Person {FirstName = "Jon", LastName = "Doe"};
+            var p = new Person("Jon", "Doe");
             Console.WriteLine(p);
             var p1 = p with{LastName = "Kate",FavoriteColor = "yellow"};
             Console.WriteLine(p1);
@@ -218,10 +218,13 @@ namespace Csharp
     {
         public string FirstName { get; init; }
         public string LastName { get; init; }
-        public string Address { get; init; }
-        public string City { get; init; }
-        public string FavoriteColor { get; init; }
+        public string? Address { get; init; }
+        public string? City { get; init; }
+        public string? FavoriteColor { get; init; }
         // and so on...
+
+        public Person(string firstName, string lastName)
+            => (FirstName, LastName) = (firstName, lastName);
     }
 
     public enum LifeStage
