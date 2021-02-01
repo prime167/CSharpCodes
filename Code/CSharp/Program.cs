@@ -51,8 +51,7 @@ namespace Csharp
             Assert.Equal(arr[2], bytes[2]);
             Assert.Equal(45, arr[2]);
 
-            string[] words = new string[]
-            {
+            string[] words = {
                 // index from start    index from end
                 "The",      // 0                   ^9
                 "quick",    // 1                   ^8
