@@ -6,8 +6,8 @@ namespace SocketFileServer.Common
     // 即时计算发送文件的状态
     public class SendStatus
     {
-        private FileInfo info;
-        private long fileBytes;
+        private readonly FileInfo info;
+        private readonly long fileBytes;
 
         public SendStatus(string filePath)
         {

@@ -189,9 +189,9 @@ namespace Algorithms
 
         public void Reverse1()
         {
-            var pre = new Node();
-            var current = new Node();
-            var next = new Node();
+            Node pre;
+            Node current;
+            Node next;
             pre = _head;
             current = _head.Next;
             while (current != null)

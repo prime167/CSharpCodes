@@ -21,7 +21,7 @@ namespace Common
             if (!string.IsNullOrEmpty(temp))
                 input = temp + input;
 
-            string output = "";
+            string output;
             string pattern = @"(?<=^\[length=)(\d+)(?=\])";
             int length;
 

@@ -8,9 +8,9 @@
     <Protobuf Include="..\Protos\*.proto" GrpcServices="Client" Link="Protos\%(RecursiveDir)%(Filename)%(Extension)" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Google.Protobuf" Version="3.14.0" />
-    <PackageReference Include="Grpc.Net.Client" Version="2.35.0" />
-    <PackageReference Include="Grpc.Tools" Version="2.35.0">
+    <PackageReference Include="Google.Protobuf" Version="3.*" />
+    <PackageReference Include="Grpc.Net.Client" Version="2.*" />
+    <PackageReference Include="Grpc.Tools" Version="2.*">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
